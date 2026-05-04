@@ -7,7 +7,7 @@ pipeline {
         CONTAINER_NAME = "ci-nginx-test"
         HOST_PORT    = "9889"
         NGINX_URL    = "http://localhost:9889"
-	GITHUB_URL   = "https://github.com/miBBB/ci-nginx.git"
+	//GITHUB_URL   = "https://github.com/miBBB/ci-nginx.git"
     }
 
     triggers {
@@ -20,7 +20,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: ${GITHUB_URL}
+                    url: 'https://github.com/miBBB/ci-nginx.git'
             }
         }
 
